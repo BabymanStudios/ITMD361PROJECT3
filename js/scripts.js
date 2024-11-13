@@ -3,9 +3,16 @@ let currentIndex = 0;
 const images = document.querySelectorAll('.slider img');
 const totalImages = images.length;
 
+// Initialize the first image as visible
+images[currentIndex].classList.add('active');
+
+// Show the image based on the current index
 function showImage(index) {
   images.forEach((img, i) => {
-    img.style.display = i === index ? 'block' : 'none';
+    img.classList.remove('active');
+    if (i === index) {
+      img.classList.add('active');
+    }
   });
 }
 
@@ -18,9 +25,6 @@ document.getElementById('prev').addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + totalImages) % totalImages;
   showImage(currentIndex);
 });
-
-// Initialize the slider to show the first image
-showImage(currentIndex);
 
 // Google Maps Initialization
 function initMap() {

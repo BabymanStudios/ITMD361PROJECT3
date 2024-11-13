@@ -6,10 +6,9 @@
   <title>Map of Hilo</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="scripts.js" defer></script>
 </head>
 <body>
-	 <ul>
+	<ul>
     <li><a href="index.html">Resume</a></li>
     <li><a href="hawaiianfood.html">Hawaiian Food</a></li>
     <li><a href="lizardvnazis.html">Draconian D-Day</a></li>
@@ -17,6 +16,22 @@
 		<script src="scripts.js" defer></script>
   </ul>
   <h1>Map of Hilo</h1>
-	<div id="map"></div>
+  <div id="map"></div>
+  
+  <script>
+    function initMap() {
+      const hilo = { lat: 19.7297, lng: -155.0907 };
+      const map = new google.maps.Map(document.getElementById('map'), {
+        center: hilo,
+        zoom: 12,
+      });
+      new google.maps.Marker({
+        position: hilo,
+        map: map,
+        title: 'Hilo, Hawaii',
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfO6drPTvvIGfqMOM0aAfaz5xO1xUhBOM&callback=initMap"></script>
 </body>
 </html>

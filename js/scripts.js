@@ -32,6 +32,11 @@ function initMap() {
   const map = new google.maps.Map(document.getElementById('map'), {
     center: hilo,
     zoom: 12,
+    styles: [
+      { elementType: "geometry", stylers: [{ color: "#ebe3cd" }] },
+      { elementType: "labels.text.fill", stylers: [{ color: "#523735" }] },
+      { elementType: "labels.text.stroke", stylers: [{ color: "#f5f1e6" }] }
+    ]
   });
   new google.maps.Marker({
     position: hilo,

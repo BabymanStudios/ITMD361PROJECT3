@@ -149,7 +149,6 @@ body.draconic .video-container video {
   border-radius: 8px;
 }
 
-/* Slider styles */
 .slider {
   text-align: center;
   position: relative;
@@ -162,15 +161,17 @@ body.draconic .video-container video {
 }
 
 .slider img {
+  display: block;
+  margin: 0 auto; 
   width: 100%;
   height: auto;
   max-width: 100%;
-  display: none; /* Hide all images by default */
   border-radius: 8px;
+  display: none; 
 }
 
 .slider img.active {
-  display: block; /* Only display the active image */
+  display: block; 
 }
 
 #prev, #next {

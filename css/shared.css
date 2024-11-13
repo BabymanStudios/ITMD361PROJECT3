@@ -1,224 +1,75 @@
-body {
-  font-family: "Arial", sans-serif;
+/* General reset/normalize */
+* {
   margin: 0;
   padding: 0;
-  color: #333;
+  box-sizing: border-box;
 }
 
-ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  background-color: #f8f9fa;
-  border-bottom: 2px solid #ddd;
-}
-
-ul li {
-  margin: 0 1rem;
-}
-
-ul li a {
-  text-decoration: none;
-  color: #555;
-  padding: 0.5rem 1rem;
-  display: inline-block;
-}
-
-ul li a:hover {
-  color: #333;
-  background-color: #e7e7e7;
-}
-
-.container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-}
-
-body.resume {
-  background-color: #f4f4f9;
-}
-
-body.resume h1,
-body.resume h2,
-body.resume h3 {
-  color: #0056b3;
-}
-
-body.resume ul {
-  padding-left: 1.5rem;
-}
-
-body.resume ul li {
-  margin-bottom: 0.5rem;
-}
-
-body.resume p,
-body.resume li {
-  line-height: 1.6;
-}
-
-body.hawaiianFood {
-  background-color: #fff7e6;
-  font-family: "Comic Sans MS", "Arial", sans-serif;
-}
-
-body.hawaiianFood h1 {
-  color: #d2691e;
-}
-
-body.hawaiianFood h2 {
-  color: #8b4513;
-}
-
-body.hawaiianFood ul {
-  padding-left: 2rem;
-}
-
-body.hawaiianFood ul li {
-  margin-bottom: 1rem;
-}
-
-body.hawaiianFood .container img {
-  width: 100%;
-  height: auto;
-  border: 2px solid #8b4513;
-  margin-bottom: 1rem;
-}
-
-body.draconic {
-  background-color: #2e2e2e;
-  color: #e0e0e0;
-  font-family: "Courier New", "Arial", sans-serif;
-}
-
-body.draconic h1 {
-  color: #ff4500;
-}
-
-body.draconic h2,
-body.draconic h3 {
-  color: #ffa500;
-}
-
-body.draconic .image-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-body.draconic .image-row img {
-  width: calc(33% - 1rem);
-}
-
-body.draconic .video-container {
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-}
-
-ul {
-  justify-content: center;
-}
-
-body.hawaiianFood .container img {
-  float: right;
-  margin: 0 0 1rem 1rem;
-}
-
-body.draconic .image-row img:nth-child(1) {
-  position: relative;
-  left: 10px;
-}
-
-body.draconic .video-container video {
-  width: 80%;
-  position: relative;
-  top: 10px;
-}
-
+/* Base styles */
 body {
   font-family: Arial, sans-serif;
 }
 
-@media (min-width: 600px) {
-  .container {
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  .slider-container {
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  ul {
-    display: flex;
-    justify-content: center;
-  }
-
-  ul li {
-    margin: 0 10px;
-  }
-}
-
-@media (min-width: 900px) {
-  body {
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 2.5em;
-  }
-
-  .slider-container img {
-    width: 500px;
-    height: 350px;
-  }
-
-  .slider-container button {
-    padding: 15px;
-    font-size: 18px;
-  }
-
-  .container p {
-    line-height: 1.8;
-    font-size: 1.2em;
-  }
-}
-
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.center {
+ul {
+  list-style-type: none;
+  padding: 0;
   text-align: center;
 }
 
-.slider {
-  position: relative;
-  max-width: 100%;
-  margin: auto;
+ul li {
+  display: inline;
+  margin: 0 10px;
 }
 
-.slider-img {
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Slider styles */
+.slider {
+  text-align: center;
+  position: relative;
+}
+
+.slider img {
   width: 100%;
+  height: auto;
+  max-width: 500px;
   display: none;
 }
 
-.slider-img:first-of-type {
-  display: block;
+#prev, #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
+#prev { left: 10px; }
+#next { right: 10px; }
+
+/* Map styling */
+#map {
+  width: 100%;
+  height: 500px;
+  max-width: 800px;
+  margin: 20px auto;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+/* Media Queries for responsiveness */
 @media (min-width: 600px) {
   .container {
     padding: 20px;
@@ -245,20 +96,3 @@ body {
     height: 600px;
   }
 }
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-#map {
-  width: 100%;
-  height: 500px;
-  max-width: 800px;
-  margin: 20px auto;
-  border: 2px solid #333;
-  border-radius: 8px;
-}
-

@@ -140,83 +140,63 @@ body.draconic .video-container video {
 }
 
 body.mapsPage {
-  background-color: #fff7e6;
-  font-family: "Comic Sans MS", "Arial", sans-serif;
-  color: #333;
-  text-align: center;
+  background-color: #f0f8ff; 
+  color: #333; 
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.mapsPage .container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .mapsPage h1 {
-  color: #d2691e;
-  margin-top: 1rem;
+  text-align: center;
+  color: #0056b3;
+  margin-bottom: 1.5rem;
 }
 
-.mapsPage h2 {
-  color: #8b4513; 
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-#map {
-  width: 100%;
-  height: 400px;
-  margin: 20px auto;
-  border: 2px solid #8b4513; 
-  border-radius: 8px;
-}
-
-/* Responsive Map Sizing for Mobile */
-@media (max-width: 768px) {
-  #map {
-    height: 300px;
-  }
-}
-
-ul {
+.mapsPage ul {
   list-style: none;
   display: flex;
   justify-content: center;
   padding: 0;
   margin: 0;
-  background-color: #f8f9fa;
-  border-bottom: 2px solid #ddd;
+  background-color: #e0e0e0; 
+  border-bottom: 2px solid #bbb;
 }
 
-ul li {
+.mapsPage ul li {
   margin: 0 1rem;
 }
 
-ul li a {
+.mapsPage ul li a {
   text-decoration: none;
-  color: #555;
+  color: #0056b3;
   padding: 0.5rem 1rem;
   display: inline-block;
+  font-weight: bold;
 }
 
-ul li a:hover {
+.mapsPage ul li a:hover {
   color: #333;
-  background-color: #e7e7e7;
+  background-color: #d0e1ff;
 }
 
-/* Button Styling for Consistency */
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  background-color: #d2691e; /* Button color for Hawaiian theme */
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+#map {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 1.5rem;
 }
-
-button:hover {
-  background-color: #8b4513; /* Darker brown on hover */
-}
-
 
 .slider {
   text-align: center;

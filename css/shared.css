@@ -36,20 +36,13 @@ a {
 .slider {
   text-align: center;
   position: relative;
-  width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
 }
 
 .slider img {
   width: 100%;
   height: auto;
-  max-width: 100%;
+  max-width: 500px;
   display: none;
-}
-
-.slider img.active {
-  display: block;
 }
 
 #prev, #next {
